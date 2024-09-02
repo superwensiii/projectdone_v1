@@ -45,34 +45,34 @@ include 'components/wishlist_cart.php';
 
       <div class="swiper-slide slide">
          <div class="image">
-            <img src="images/home-img-1.png" alt="">
+            <img src="images/pngwing.com.png" alt="">
          </div>
          <div class="content">
-            <span>Upto 50% Off</span>
-            <h3>Latest Smartphones</h3>
-            <a href="category.php?category=smartphone" class="btn">Shop Now</a>
+            <span>Ink Drawing</span>
+            <h3>Ballpoint Ink</h3>
+            <a href="category.php?category=smartphone" class="btn">Click for more info.</a>
          </div>
       </div>
 
       <div class="swiper-slide slide">
          <div class="image">
-            <img src="images/home-img-2.png" alt="">
+            <img src="images/pngegg.png" alt="">
          </div>
          <div class="content">
-            <span>Upto 50% off</span>
-            <h3>Latest Watches</h3>
-            <a href="category.php?category=watch" class="btn">Shop Now.</a>
+            <span>Graphite Drawing</span>
+            <h3>Charcoal Pencil</h3>
+            <a href="category.php?category=watch" class="btn">Click if you want ><</a>
          </div>
       </div>
 
       <div class="swiper-slide slide">
          <div class="image">
-            <img src="images/home-img-3.png" alt="">
+            <img src="images/painting.png" alt="">
          </div>
          <div class="content">
-            <span>upto 50% off</span>
-            <h3>Latest headsets</h3>
-            <a href="shop.php" class="btn">Shop Now.</a>
+            <span>Painting</span>
+            <h3>Acrylic and Canvas</h3>
+            <a href="shop.php" class="btn">painting na kita sige </a>
          </div>
       </div>
 
@@ -95,50 +95,21 @@ include 'components/wishlist_cart.php';
    <div class="swiper-wrapper">
 
    <a href="category.php?category=laptop" class="swiper-slide slide">
-      <img src="images/icon-1.png" alt="">
-      <h3>Laptop</h3>
+      <img src="images/fountain-pen-close-up.png" alt="">
+      <h3>Ink</h3>
    </a>
 
    <a href="category.php?category=tv" class="swiper-slide slide">
-      <img src="images/icon-2.png" alt="">
-      <h3>Television</h3>
+      <img src="images/charcoal-pencil.png" alt="">
+      <h3>Charcoal</h3>
    </a>
 
    <a href="category.php?category=camera" class="swiper-slide slide">
       <img src="images/icon-3.png" alt="">
-      <h3>Camera</h3>
+      <h3>Painting</h3>
    </a>
 
-   <a href="category.php?category=mouse" class="swiper-slide slide">
-      <img src="images/icon-4.png" alt="">
-      <h3>Mouse</h3>
-   </a>
-
-   <a href="category.php?category=fridge" class="swiper-slide slide">
-      <img src="images/icon-5.png" alt="">
-      <h3>Fridge</h3>
-   </a>
-
-   <a href="category.php?category=washing" class="swiper-slide slide">
-      <img src="images/icon-6.png" alt="">
-      <h3>Washing machine</h3>
-   </a>
-
-   <a href="category.php?category=smartphone" class="swiper-slide slide">
-      <img src="images/icon-7.png" alt="">
-      <h3>Smartphone</h3>
-   </a>
-
-   <a href="category.php?category=watch" class="swiper-slide slide">
-      <img src="images/icon-8.png" alt="">
-      <h3>Watch</h3>
-   </a>
-
-   </div>
-
-   <div class="swiper-pagination"></div>
-
-   </div>
+   
 
 </section>
 

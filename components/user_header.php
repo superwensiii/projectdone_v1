@@ -14,15 +14,16 @@
 <header class="header">
 
    <section class="flex">
+      
 
-      <a href="home.php" class="logo">Great Wall Arts<span>.Com</span></a>
+      <a href="home.php" class="logo">Wensink-Art<span>.Com</span></a>
 
       <nav class="navbar">
          <a href="home.php">Home</a>
-         <a href="about.php">About Us</a>
+         <a href="about.php">About Me</a>
          <a href="orders.php">Orders</a>
-         <a href="shop.php">Shop Now</a>
-         <a href="contact.php">Contact Us</a>
+         <a href="shop.php">Commission</a>
+         <a href="contact.php">Contact me</a>
       </nav>
 
       <div class="icons">
