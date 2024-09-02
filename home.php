@@ -20,7 +20,7 @@ include 'components/wishlist_cart.php';
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Great Wall Arts</title>
+   <title>wensink-art</title>
 
    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
    
@@ -105,8 +105,18 @@ include 'components/wishlist_cart.php';
    </a>
 
    <a href="category.php?category=camera" class="swiper-slide slide">
-      <img src="images/icon-3.png" alt="">
+      <img src="images/varnish.png" alt="">
       <h3>Painting</h3>
+   </a>
+
+   <a href="category.php?category=camera" class="swiper-slide slide">
+      <img src="images/digital-drawing.png" alt="">
+      <h3>Digital Drawing</h3>
+   </a>
+
+   <a href="category.php?category=camera" class="swiper-slide slide">
+      <img src="images/style.png" alt="">
+      <h3>Manga Panel</h3>
    </a>
 
    
