@@ -53,12 +53,13 @@ if(isset($_GET['delete'])){
 
    <?php
       $select_orders = $conn->prepare("SELECT * FROM `orders`");
-      $select_orders->execute();
+      $select_orders->execute([]);
       if($select_orders->rowCount() > 0){
          while($fetch_orders = $select_orders->fetch(PDO::FETCH_ASSOC)){
    ?>
    <div class="box">
       <p> Placed On : <span><?= $fetch_orders['placed_on']; ?></span> </p>
+      <p> Email : <span><?= $fetch_orders['email']; ?></span> </p>
       <p> Name : <span><?= $fetch_orders['name']; ?></span> </p>
       <p> Number : <span><?= $fetch_orders['number']; ?></span> </p>
       <p> Address : <span><?= $fetch_orders['address']; ?></span> </p>

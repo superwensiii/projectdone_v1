@@ -4,6 +4,8 @@ include 'components/connect.php';
 
 session_start();
 
+
+
 if(isset($_SESSION['user_id'])){
    $user_id = $_SESSION['user_id'];
 }else{
@@ -58,6 +60,7 @@ if(isset($_POST['update_qty'])){
    <h3 class="heading">Shopping cart</h3>
 
    <div class="box-container">
+      
 
    <?php
       $grand_total = 0;

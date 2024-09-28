@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap');
 
 :root{
-   --main-color:#2980b9;
-   --orange:#f39c12;
-   --red:#e74c3c;
+   --main-color:#00fff2c2;
+   --orange:#0084ff;
+   --red:#e5e493;
    --black:#333;
    --white:#fff;
    --light-color:#666;
@@ -18,6 +18,7 @@
    box-sizing: border-box;
    outline: none; border:none;
    text-decoration: none;
+   
 }
 
 *::selection{
@@ -44,9 +45,8 @@ html{
 }
 
 body{
-   background-color: var(--light-bg);
-}
-
+   background: rgb(80,80,80);
+   background: linear-gradient(90deg, rgba(80,80,80,0.9640231092436975) 0%, rgba(166,166,166,0.9752275910364145) 35%, rgba(209,209,209,1) 89%, rgba(255,255,255,1) 100%);
 section{
    padding:2rem;
    max-width: 1200px;
@@ -153,9 +153,11 @@ section{
 }
 
 .header{
+   
    position: sticky;
    top:0; left:0; right:0;
-   background-color: var(--white);
+   background: rgb(252,250,0);
+background: linear-gradient(90deg, rgba(252,250,0,0.7371323529411764) 2%, rgba(255,248,0,0.76234243697479) 32%, rgba(147,151,53,0.4962359943977591) 81%);
    box-shadow: var(--box-shadow);
    z-index: 1000;
 }
@@ -183,20 +185,20 @@ section{
 }
 
 .header .flex .navbar a:hover{
-   color:var(--main-color);
+   color:var(--black);
    text-decoration: underline;
 }
 
 
 .header .flex .icons > *{
-   margin-left: 1rem;
+   margin-left: 2rem;
    font-size: 2.5rem;
    cursor: pointer;
    color:var(--black);
 }
 
 .header .flex .icons > *:hover{
-   color:var(--main-color);
+   color:var(--white);
 }
 
 .header .flex .icons a span{
@@ -233,8 +235,7 @@ section{
 }
 
 .home-bg{
-   
-   background: url("image/home.bg.png") no-repeat fixed center;
+   background:url(../images/qwerty.jpg) no-repeat;
    background-size: cover;
    background-position: center;
 }
@@ -270,8 +271,8 @@ section{
 
 .home-bg .home .slide .content h3{
    margin-top: 1rem;
-   font-size: 4rem;
-   color:var(--white);
+   font-size: 5rem;
+   color:var(--black);
    text-transform: uppercase;
 }
 
@@ -700,39 +701,102 @@ section{
    color:var(--black);
 }
 
-.contact form{
-   padding:2rem;
-   text-align: center;
-   background-color: var(--white);
-   box-shadow: var(--box-shadow);
-   border-radius: .5rem;
-   border:var(--border);
-   max-width: 50rem;
-   margin:0 auto;
+.container {
+   max-width: 800px;
+   margin: 0 auto;
 }
 
-.contact form h3{
-   margin-bottom: 1rem;
-   text-transform: capitalize;
-   font-size: 2.5rem;
-   color:var(--black);
+.bg-white {
+   background-color: #fff;
 }
 
-.contact form .box{
-   margin:1rem 0;
+.shadow {
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.px-4 {
+   padding-left: 1rem;
+   padding-right: 1rem;
+}
+
+/* Button Styling */
+.btn {
+   display: inline-block;
+   padding: 10px 20px;
+   background-color: #007bff;
+   color: white;
+   border-radius: 5px;
+   border: none;
+   cursor: pointer;
+   font-size: 16px;
+   transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+   background-color: #0056b3;
+   transform: scale(1.05);
+}
+
+/* Input fields styling */
+.box {
    width: 100%;
-   background-color: var(--light-bg);
-   padding:1.4rem;
-   font-size: 1.8rem;
-   color:var(--black);
-   border-radius: .5rem;
+   padding: 10px;
+   border: 1px solid #ccc;
+   margin-bottom: 10px;
+   border-radius: 5px;
+   outline: none;
+   transition: border-color 0.3s ease;
 }
 
-.contact form textarea{
-   height: 15rem;
-   resize: none;
+.box:focus {
+   border-color: #007bff;
 }
 
+/* Animation for form */
+@keyframes fadeIn {
+   0% { opacity: 0; transform: translateY(20px); }
+   100% { opacity: 1; transform: translateY(0); }
+}
+
+form {
+   animation: fadeIn 1s ease;
+}
+
+/* Social Media Icons */
+.bi-facebook {
+   color: #4267B2;
+}
+
+.bi-facebook:hover {
+   color: #324f91;
+}
+
+h3 {
+   color: #333;
+   margin-bottom: 20px;
+}
+
+.contact {
+   margin-top: 20px;
+}
+
+.contact form {
+   background-color: #fffcfb;
+   padding: 20px;
+   border-radius: 10px;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Iframe styling */
+iframe {
+   border: 2px solid #ddd;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+   transition: transform 0.3s ease;
+}
+
+iframe:hover {
+   transform: scale(1.02);
+}
 .search-form form{
    display: flex;
    gap:1rem;
@@ -863,50 +927,149 @@ section{
    color:var(--red);
 }
 
-.checkout-orders form{
-   padding:2rem;
-   border:var(--border);
-   background-color: var(--white);
-   box-shadow: var(--box-shadow);
-   border-radius: .5rem;
+.checkout-orders {
+   max-width: 1200px;
+   margin: 40px auto;
+   padding: 20px;
+   background-color: white;
+   border-radius: 8px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.checkout-orders form h3{
-   border-radius: .5rem;
-   background-color: var(--black);
-   color:var(--white);
-   padding:1.5rem 1rem;
+.checkout-orders h3 {
    text-align: center;
-   text-transform: uppercase;
-   margin-bottom: 2rem;
-   font-size: 2.5rem;
+   font-size: 28px;
+   margin-bottom: 30px;
+   color: #555;
 }
 
-.checkout-orders form .flex{
+.display-orders, .customer-info {
+   margin-bottom: 20px;
+}
+
+.order-item {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px 0;
+   border-bottom: 1px solid #ddd;
+}
+
+.order-item img {
+   border-radius: 6px;
+   margin-right: 15px;
+}
+
+.order-item p {
+   font-size: 18px;
+}
+
+.order-item span {
+   color: #666;
+}
+
+.grand-total {
+   text-align: right;
+   font-size: 22px;
+   font-weight: 600;
+   color: #333;
+   margin-top: 20px;
+}
+
+/* Input and Form Styles */
+form {
+   display: flex;
+   flex-direction: column;
+}
+
+.flex {
    display: flex;
    flex-wrap: wrap;
-   gap:1.5rem;
-   justify-content: space-between;
+   gap: 20px;
 }
 
-.checkout-orders form .flex .inputBox{
-   width: 49%;
+.inputBox {
+   flex: 1 1 45%;
+   margin-bottom: 20px;
 }
 
-.checkout-orders form .flex .inputBox .box{
+.inputBox span {
+   font-size: 16px;
+   color: #555;
+}
+
+.inputBox input, .inputBox select {
    width: 100%;
-   border:var(--border);
-   border-radius: .5rem;
-   font-size: 1.8rem;
-   color:var(--black);
-   padding:1.2rem 1.4rem;
-   margin:1rem 0;
-   background-color: var(--light-bg);
+   padding: 12px;
+   margin-top: 8px;
+   border: 1px solid #ddd;
+   border-radius: 5px;
+   font-size: 16px;
+   color: #333;
 }
 
-.checkout-orders form .flex .inputBox span{
-   font-size: 1.8rem;
-   color:var(--light-color);
+.inputBox input:focus, .inputBox select:focus {
+   outline: none;
+   border-color: #007bff;
+   box-shadow: 0 0 6px rgba(0, 123, 255, 0.25);
+}
+
+.btn {
+   background-color: #007bff;
+   color: white;
+   padding: 15px;
+   font-size: 18px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+   width: 100%;
+   max-width: 300px;
+   margin: 20px auto 0;
+   display: block;
+}
+
+.btn:hover {
+   background-color: #0056b3;
+}
+
+.disabled {
+   background-color: #bbb;
+   pointer-events: none;
+}
+
+.empty {
+   text-align: center;
+   font-size: 18px;
+   color: #888;
+   margin: 30px 0;
+}
+
+.customer-info h4 {
+   margin-bottom: 15px;
+   font-size: 22px;
+   color: #333;
+}
+
+.customer-info p {
+   font-size: 16px;
+   margin-bottom: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+   .flex {
+       flex-direction: column;
+   }
+
+   .order-item {
+       flex-direction: column;
+       align-items: flex-start;
+   }
+
+   .grand-total {
+       text-align: left;
+   }
 }
 
 .orders .box-container{
@@ -937,7 +1100,7 @@ section{
 }
 
 .footer{
-   background-color: var(--white);
+   background-color: var(--black);
    /* padding-bottom: 7rem; */
 }
 
@@ -950,7 +1113,7 @@ section{
 
 .footer .grid .box h3{
    font-size: 2rem;
-   color:var(--black);
+   color:var(--white);
    margin-bottom: 2rem;
    text-transform: capitalize;
 }
@@ -959,7 +1122,7 @@ section{
    display: block;
    margin:1.5rem 0;
    font-size: 1.7rem;
-   color:var(--light-color);
+   color:var(--white);
 }
 
 .footer .grid .box a i{
@@ -981,7 +1144,7 @@ section{
    padding: 2.5rem 2rem;
    border-top: var(--border);
    font-size: 2rem;
-   color:var(--black);
+   color:var(--white);
 }
 
 .footer .credit span{
@@ -1012,7 +1175,7 @@ section{
       top:99%; left:0; right:0;
       border-top: var(--border);
       border-bottom: var(--border);
-      background-color: var(--white);
+      background-color: var(--main-color);
       transition: .2s linear;
       clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
    }

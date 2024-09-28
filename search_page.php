@@ -35,7 +35,7 @@ include 'components/wishlist_cart.php';
 
 <section class="search-form">
    <form action="" method="post">
-      <input type="text" name="search_box" placeholder="search here..." maxlength="100" class="box" required>
+      <input type="text" name="search_box" placeholder="Search Here..." maxlength="100" class="box" required>
       <button type="submit" class="fas fa-search" name="search_btn"></button>
    </form>
 </section>
@@ -62,7 +62,7 @@ include 'components/wishlist_cart.php';
       <img src="uploaded_img/<?= $fetch_product['image_01']; ?>" alt="">
       <div class="name"><?= $fetch_product['name']; ?></div>
       <div class="flex">
-         <div class="price"><span>Nrs.</span><?= $fetch_product['price']; ?><span>/-</span></div>
+         <div class="price"><span>P</span><?= $fetch_product['price']; ?><span>/-</span></div>
          <input type="number" name="qty" class="qty" min="1" max="99" onkeypress="if(this.value.length == 2) return false;" value="1">
       </div>
       <input type="submit" value="add to cart" class="btn" name="add_to_cart">

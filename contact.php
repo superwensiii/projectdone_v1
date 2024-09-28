@@ -61,24 +61,99 @@ if(isset($_POST['send'])){
 
 <section class="contact">
 
-   <form action="" method="post">
-      <h3>Get in touch.</h3>
-      <input type="text" name="name" placeholder="enter your name" required maxlength="20" class="box">
-      <input type="email" name="email" placeholder="enter your email" required maxlength="50" class="box">
-      <input type="number" name="number" min="0" max="9999999999" placeholder="enter your number" required onkeypress="if(this.value.length == 10) return false;" class="box">
-      <textarea name="msg" class="box" placeholder="enter your message" cols="30" rows="10"></textarea>
-      <input type="submit" value="send message" name="send" class="btn">
-   </form>
+   <div class="contact-container">
+      <!-- Contact Form -->
+      <form action="" method="post" class="contact-form">
+         <h3>Get in touch.</h3>
+         <input type="text" name="name" placeholder="Enter your name:" required maxlength="20" class="box">
+         <input type="email" name="email" placeholder="Enter your email:" required maxlength="50" class="box">
+         <input type="number" name="number" min="0" max="9999999999" placeholder="Contact No.:" required onkeypress="if(this.value.length == 10) return false;" class="box">
+         <textarea name="msg" class="box" placeholder="Enter your thoughts:" cols="30" rows="10"></textarea>
+         <input type="submit" value="send message" name="send" class="btn">
+      </form>
+
+      <!-- Google Map Embed and Company Info -->
+      <div class="map-container">
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61781.67860036959!2d121.03997314514878!3d14.578841261254976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c7dc88f7b24f%3A0x4a592b2b4b34fd89!2sPasig%2C%20Metro%20Manila!5e0!3m2!1sen!2sph!4v1726764350860!5m2!1sen!2sph" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+         <!-- Company Information -->
+         <div class="company-info">
+            <h3>Company Information</h3>
+            <p><strong>Main Branch:</strong> Pasig City</p>
+            <p><strong>Call us:</strong> 09312321321</p>
+            <p><strong>Email:</strong> <a href="mailto:greatwallph@gmail.com">greatwallph@gmail.com</a></p>
+            <p><strong>Facebook:</strong> <a href="https://facebook.com/hahahahaha" target="_blank">hahahahaha</a></p>
+         </div>
+      </div>
+   </div>
 
 </section>
 
+<style>
+   .contact-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+   }
 
+   .contact-form {
+      flex: 1;
+      max-width: 50%; /* Adjust as needed */
+      margin-right: 20px;
+   }
 
+   .map-container {
+      flex: 1;
+      max-width: 400px; /* Adjust as needed */
+   }
 
+   .box {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+   }
 
+   .btn {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+   }
 
+   .btn:hover {
+      background-color: #555;
+   }
 
+   .company-info {
+      margin-top: 20px;
+      background-color: #f9f9f9;
+      padding: 15px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+   }
 
+   .company-info h3 {
+      margin-bottom: 10px;
+      font-size: 18px;
+      font-weight: bold;
+   }
+
+   .company-info p {
+      margin: 5px 0;
+      font-size: 14px;
+   }
+
+   .company-info a {
+      color: #007bff;
+      text-decoration: none;
+   }
+
+   .company-info a:hover {
+      text-decoration: underline;
+   }
+</style>
 
 
 

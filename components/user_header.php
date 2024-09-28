@@ -1,3 +1,5 @@
+
+
 <?php
    if(isset($message)){
       foreach($message as $message){
@@ -14,16 +16,16 @@
 <header class="header">
 
    <section class="flex">
-      
 
-      <a href="home.php" class="logo">Wensink-Art<span>.Com</span></a>
+      <a href="home.php" class="logo">Great Wall Arts</a>
 
       <nav class="navbar">
          <a href="home.php">Home</a>
-         <a href="about.php">About Me</a>
+        
          <a href="orders.php">Orders</a>
-         <a href="shop.php">Commission</a>
-         <a href="contact.php">Contact me</a>
+         <a href="shop.php">Shop Now</a>
+         
+         <a href="contact.php">Contact Us</a>
       </nav>
 
       <div class="icons">
@@ -53,8 +55,9 @@
          <p><?= $fetch_profile["name"]; ?></p>
          <a href="update_user.php" class="btn">Update Profile.</a>
          <div class="flex-btn">
-            <a href="user_register.php" class="option-btn">Register.</a>
+            <a href="admin/admin_login.php" class="option-btn">Admin.</a>
             <a href="user_login.php" class="option-btn">Login.</a>
+            
          </div>
          <a href="components/user_logout.php" class="delete-btn" onclick="return confirm('logout from the website?');">logout</a> 
          <?php
@@ -62,8 +65,9 @@
          ?>
          <p>Please Login Or Register First to proceed !</p>
          <div class="flex-btn">
-            <a href="user_register.php" class="option-btn">Register</a>
+            <a href="admin/admin_login.php" class="option-btn">Admin</a>
             <a href="user_login.php" class="option-btn">Login</a>
+            
          </div>
          <?php
             }

@@ -1,0 +1,4 @@
+;/*FB_PKG_DELIM*/
+
+__d("MWV2MessageProfilePhotoMenuQuery_facebookRelayOperation",[],(function(a,b,c,d,e,f){e.exports="6825449144230575"}),null);
+__d("XP2PVerificationDialogBaseControllerRouteBuilder",["jsRouteBuilder"],(function(a,b,c,d,e,f,g){a=c("jsRouteBuilder")("/p2p/verify/dialog/",Object.freeze({is_sender_flow:!1}),void 0);b=a;g["default"]=b}),98);
