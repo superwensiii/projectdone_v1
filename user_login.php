@@ -149,6 +149,8 @@ if(isset($_POST['submit'])){
    .g-recaptcha {
       margin-bottom: 20px;
    }
+
+   
 </style>
 
 <section class="form-container">
@@ -229,6 +231,7 @@ if (isset($_GET['code'])) {
     $google_account_info = $google_oauth->userinfo->get();
     $email = $google_account_info->email;
     $name = $google_account_info->name;
+    
     
 
     // Now you can use this profile info to create an account on your website and log the user in.
