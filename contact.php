@@ -50,6 +50,8 @@ if(isset($_POST['send'])){
    
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Roboto:wght@400;500&display=swap">
+
 
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
@@ -90,69 +92,140 @@ if(isset($_POST['send'])){
 </section>
 
 <style>
-   .contact-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      flex-wrap: wrap;
-   }
+ body {
+    font-family: 'Roboto', sans-serif; /* Use a modern and professional font for the body */
+    background-color: #f8f8f8;
+    color: #333;
+}
 
-   .contact-form {
-      flex: 1;
-      max-width: 50%; /* Adjust as needed */
-      margin-right: 20px;
-   }
+h3, h1, h2 {
+    font-family: 'Merriweather', serif; /* Use a more formal font for headings */
+    color: #333;
+    text-align: center;
+}
 
-   .map-container {
-      flex: 1;
-      max-width: 400px; /* Adjust as needed */
-   }
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px;
+    background-color: #f8f8f8;
+}
 
-   .box {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 10px;
-   }
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+    max-width: 45%;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+}
 
-   .btn {
-      padding: 10px 20px;
-      background-color: #333;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-   }
+.contact-form h3 {
+    font-family: 'Merriweather', serif;
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
 
-   .btn:hover {
-      background-color: #555;
-   }
+.contact-form .box {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
 
-   .company-info {
-      margin-top: 20px;
-      background-color: #f9f9f9;
-      padding: 15px;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-   }
+.contact-form .btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    font-size: 16px;
+}
 
-   .company-info h3 {
-      margin-bottom: 10px;
-      font-size: 18px;
-      font-weight: bold;
-   }
+.contact-form .btn:hover {
+    background-color: #0056b3;
+}
 
-   .company-info p {
-      margin: 5px 0;
-      font-size: 14px;
-   }
+.map-container {
+    flex: 1;
+    min-width: 300px;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-   .company-info a {
-      color: #007bff;
-      text-decoration: none;
-   }
+.map-container iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
 
-   .company-info a:hover {
-      text-decoration: underline;
-   }
+.company-info {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #2c3e50;
+}
+
+.company-info h3 {
+    font-family: 'Merriweather', serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+}
+
+.company-info p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+.company-info a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+.company-info a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-form, .map-container {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+
 </style>
 
 

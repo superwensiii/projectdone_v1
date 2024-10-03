@@ -17,10 +17,10 @@
 
    <section class="flex">
 
-      <a href="home.php" class="logo">Great Wall Arts</a>
+      <a href="index.php" class="logo">Great Wall Arts</a>
 
       <nav class="navbar">
-         <a href="home.php">Home</a>
+         <a href="index.php">Home</a>
         
          <a href="orders.php">Orders</a>
          <a href="shop.php">Shop Now</a>

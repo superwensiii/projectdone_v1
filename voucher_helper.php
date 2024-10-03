@@ -21,7 +21,7 @@ function check_and_award_voucher($conn, $customer_id) {
         $insert_voucher = $conn->prepare("INSERT INTO `customer_vouchers` (customer_id, voucher_code, discount_amount, issue_date, expiration_date) VALUES (?, ?, ?, ?, ?)");
         $insert_voucher->execute([$customer_id, $voucher_code, $discount_amount, $issue_date, $expiration_date]);
 
-        echo "<p>Congratulations! You've earned a voucher for your loyalty: $voucher_code (₱$discount_amount off)</p>";
+        echo "<p style='text-align: center; font-size: 18px; font-weight: bold; color: #28a745;'>Congratulations! You've earned a voucher for your loyalty: $voucher_code (₱$discount_amount off)</p>";
     }
 }
 ?>
