@@ -88,6 +88,7 @@ section{
 
 .option-btn{
    background-color: var(--orange);
+   
 }
 
 .delete-btn{
@@ -97,6 +98,7 @@ section{
 .flex-btn{
    display: flex;
    gap:1rem;
+   
 }
 
 .message{
@@ -171,7 +173,10 @@ background: linear-gradient(90deg, rgba(190,190,190,1) 2%, rgba(252,252,252,0.91
 
 .header .flex .logo{
    font-size: 2.5rem;
-   color:var(--black);
+   color: yellow, black;
+  
+  
+  
 }
 
 .header .flex .logo span{
@@ -235,7 +240,7 @@ background: linear-gradient(90deg, rgba(190,190,190,1) 2%, rgba(252,252,252,0.91
 }
 
 .home-bg{
-   background:url(../images/dadada.jpg) no-repeat;
+   background:url(../images/kupal.jpg) no-repeat;
    background-size: cover;
    background-position: center;
 }

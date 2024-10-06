@@ -6,6 +6,48 @@ session_start();
 
 
 
+if (isset($_POST['product_id'])) {
+    $product_id = $_POST['product_id'];
+    
+    // Check if the cart session already exists
+    if (!isset($_SESSION['cart'])) {
+        $_SESSION['cart'] = [];
+    }
+
+    // Add product to cart session
+    $_SESSION['cart'][] = $product_id;
+    echo 'Product added to cart!';
+    // You could also redirect to the cart page here.
+}
+
+
+
+
+if (isset($_POST['add_to_cart'])) {
+   $pid = $_POST['pid'];
+   $name = $_POST['name'];
+   $price = $_POST['price'];
+   $image = $_POST['image'];
+   $user_id = $_SESSION['user_id'] ?? '';
+
+   if ($user_id == '') {
+       header('location:login.php');
+       exit();
+   }
+
+   // Add to cart logic
+   $check_cart = $conn->prepare("SELECT * FROM `cart` WHERE user_id = ? AND pid = ?");
+   $check_cart->execute([$user_id, $pid]);
+
+   if ($check_cart->rowCount() > 0) {
+       $message[] = 'Product already in cart!';
+   } else {
+       $insert_cart = $conn->prepare("INSERT INTO `cart` (user_id, pid, name, price, image, quantity) VALUES (?, ?, ?, ?, ?, 1)");
+       $insert_cart->execute([$user_id, $pid, $name, $price, $image]);
+       header('location:cart.php'); // Redirect to the cart page after adding to cart
+       exit();
+   }
+}
 if(isset($_SESSION['user_id'])){
    $user_id = $_SESSION['user_id'];
 }else{

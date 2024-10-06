@@ -250,14 +250,28 @@ function closeNotification() {
       <form action="user_login.php" method="post" class="login-form">
          <div class="input-container">
             <h1>LOGIN NOW</h1>
-            <input type="email" name="email" required placeholder="Enter your email" maxlength="50" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
+            <input type="email" name="email" required placeholder="Enter your email" maxlength="50" class="box"  oninput="this.value = this.value.replace(/\s/g, '')">
          </div>
          <div class="input-container">
-            <input type="password" name="pass" required placeholder="Enter your password" maxlength="20" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
+            <input type="password" name="pass" required placeholder="Enter your password" maxlength="20" id="pass" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
          </div>
+         <input type="checkbox" onclick="myFunction()">Show Password
          <div class="g-recaptcha" data-sitekey="6Lci_U4qAAAAADpnsZ7iksRyKzezJJp2E5jsn_nf"></div>
          <input type="submit" value="Login Now" class="btn" name="submit">
          <p>Don't have an account? <a href="user_register.php" class="option-btn">Register Now</a></p>
+
+         <script>
+            function myFunction() {
+  var x = document.getElementById("pass");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
+
+
          <style>
             .google-login-btn {
     display: inline-flex;

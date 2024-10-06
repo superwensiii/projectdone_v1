@@ -2,6 +2,7 @@
 include 'components/connect.php';
 include 'voucher_helper.php';  // Include the voucher helper
 
+
 session_start();
 
 if(isset($_SESSION['user_id'])){
@@ -19,7 +20,7 @@ if(isset($_POST['order'])) {
    $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
    $number = filter_var($_POST['number'], FILTER_SANITIZE_STRING);
    $email = filter_var($_POST['email'], FILTER_SANITIZE_STRING);
-   $method = filter_var($_POST['method'], FILTER_SANITIZE_STRING);
+   $method = isset($_POST['method']) ? $_POST['method'] : '';
    $address = 'flat no. '. $_POST['flat'] .', '. $_POST['street'] .', '. $_POST['city'] .', '. $_POST['state'] .', '. $_POST['country'] .' - '. $_POST['pin_code'];
    $address = filter_var($address, FILTER_SANITIZE_STRING);
    $total_products = $_POST['total_products'];
@@ -135,7 +136,7 @@ function closeNotification() {
                     $grand_total += ($fetch_cart['price'] * $fetch_cart['quantity']);
             ?>
                 <div class="order-item">
-                    <img src="images/<?= $fetch_cart['image']; ?>" alt="<?= $fetch_cart['name']; ?>" style="width: 100px; height: auto;">
+                    <img src="images/jpg<?= $fetch_cart['image']; ?>" alt="<?= $fetch_cart['name']; ?>" style="width: 100px; height: auto;">
                     <p> <?= $fetch_cart['name']; ?> <span>(<?= '₱'.$fetch_cart['price'].' x '. $fetch_cart['quantity']; ?>)</span> </p>
                 </div>
             <?php
@@ -281,7 +282,7 @@ h1 {
 
       <div class="flex">
          <div class="inputBox">
-            <span>Customer Name:</span>
+         <label for="fname"><i class="fa fa-user"></i> Full Name</label>
             <input type="text" name="name" placeholder="Enter your name" class="box" maxlength="20" required>
          </div>
          <div class="inputBox">
@@ -290,7 +291,7 @@ h1 {
          </div>
          
          <div class="inputBox">
-            <span>Your Email:</span>
+         <label for="email"><i class="fa fa-envelope"></i> Your Email</label>
             <input type="email" name="email" placeholder="Enter your email" class="box" maxlength="50" required>
          </div>
          <h1>Payment Method</h1>

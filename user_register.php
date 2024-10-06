@@ -17,54 +17,34 @@ if(isset($_POST['submit'])){
 
 }
 
-   $name = $_POST['name'];
-   $name = filter_var($name, FILTER_SANITIZE_STRING);
-   $email = $_POST['email'];
-   $email = filter_var($email, FILTER_SANITIZE_STRING);
-   $pass = sha1($_POST['pass']);
-   $pass = filter_var($pass, FILTER_SANITIZE_STRING);
-   $cpass = sha1($_POST['cpass']);
-   $cpass = filter_var($cpass, FILTER_SANITIZE_STRING);
-
-   $select_user = $conn->prepare("SELECT * FROM `users` WHERE email = ?");
-   $select_user->execute([$email,]);
-   $row = $select_user->fetch(PDO::FETCH_ASSOC);
-
-
+  
   
 
-?>
+$name = $_POST['name'];
+$name = filter_var($name, FILTER_SANITIZE_STRING);
+$email = $_POST['email'];
+$email = filter_var($email, FILTER_SANITIZE_STRING);
+$pass = sha1($_POST['pass']);
+$pass = filter_var($pass, FILTER_SANITIZE_STRING);
+$cpass = sha1($_POST['cpass']);
+$cpass = filter_var($cpass, FILTER_SANITIZE_STRING);
 
-<?php
-// Assuming you have already established a connection to your database with $conn
+$select_user = $conn->prepare("SELECT * FROM users WHERE email = ?");
+$select_user->execute([$email,]);
+$row = $select_user->fetch(PDO::FETCH_ASSOC);
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Check if the form fields are set in the POST request
-    $name = isset($_POST['name']) ? $_POST['name'] : '';
-    $email = isset($_POST['email']) ? $_POST['email'] : '';
-    $pass = isset($_POST['password']) ? $_POST['password'] : '';
-    $cpass = isset($_POST['confirm_password']) ? $_POST['confirm_password'] : '';
-
-    // Prepare SQL statement to check if the user already exists
-    $select_user = $conn->prepare("SELECT * FROM `users` WHERE email = ?");
-    $select_user->execute([$email]);
-
-    // Initialize the $message array
-    $message = [];
-
-    if ($select_user->rowCount() > 0) {
-        $message[] = 'Email already exists!';
-    } else {
-        if ($pass != $cpass) {
-            $message[] = 'Confirm password does not match!';
-        } else {
-            // Insert the new user into the database
-            $insert_user = $conn->prepare("INSERT INTO `users` (name, email, password) VALUES (?, ?, ?)");
-            $insert_user->execute([$name, $email, $cpass]);
-            $message[] = 'Registered successfully, login now please!';
+if($select_user->rowCount() > 0){
+   $message[] = 'email already exists!';
+}else{
+   if($pass != $cpass){
+      $message[] = 'Confirm Password not Matched!';
+   }else{
+      $insert_user = $conn->prepare("INSERT INTO `users`(name, email, password) VALUES(?,?,?)");
+      $insert_user->execute([$name, $email, $cpass]);
+      $message[] = 'Registered Successfully, Login now please!';
         }
     }
-}
+
 ?>
  
 <!-- HTML code for displaying the message -->

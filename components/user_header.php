@@ -1,6 +1,8 @@
 
 
 <?php
+
+
    if(isset($message)){
       foreach($message as $message){
          echo '
@@ -12,6 +14,7 @@
       }
    }
 ?>
+
 
 <header class="header">
 

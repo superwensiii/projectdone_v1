@@ -1,4 +1,6 @@
+
 <?php
+
 
 include 'components/connect.php';
 
@@ -99,12 +101,12 @@ include 'components/wishlist_cart.php';
    <div class="swiper-wrapper">
 
    <a href="category.php?category=tumbler" class="swiper-slide slide">
-      <img src="images/tumbler.png" alt="">
+      <img src="images/home.png" alt="">
       <h3>Tumbler</h3>
    </a>
 
    <a href="category.php?category=powerbank" class="swiper-slide slide">
-      <img src="images/powerbank.png" alt="">
+      <img src="images/bankk.png" alt="">
       <h3>Powerbank</h3>
    </a>
 
@@ -114,7 +116,7 @@ include 'components/wishlist_cart.php';
    </a>
 
    <a href="category.php?category=minifan" class="swiper-slide slide">
-      <img src="images/qwqw.png" alt="">
+      <img src="images/fafan.png" alt="">
       <h3>Mini Fan</h3>
    </a>
 
@@ -123,21 +125,7 @@ include 'components/wishlist_cart.php';
       <h3>Gift Set</h3>
    </a>
 
-   <a href="category.php?category=washing" class="swiper-slide slide">
-      <img src="images/icon-6.png" alt="">
-      <h3>Washing machine</h3>
-   </a>
-
-   <a href="category.php?category=smartphone" class="swiper-slide slide">
-      <img src="images/icon-7.png" alt="">
-      <h3>Smartphone</h3>
-   </a>
-
-   <a href="category.php?category=watch" class="swiper-slide slide">
-      <img src="images/icon-8.png" alt="">
-      <h3>Watch</h3>
-   </a>
-
+   
    </div>
 
    <div class="swiper-pagination"></div>
@@ -170,7 +158,7 @@ include 'components/wishlist_cart.php';
       <img src="uploaded_img/<?= $fetch_product['image_01']; ?>" alt="">
       <div class="name"><?= $fetch_product['name']; ?></div>
       <div class="flex">
-         <div class="price"><span>Nrs.</span><?= $fetch_product['price']; ?><span>/-</span></div>
+         <div class="price"><span>P</span><?= $fetch_product['price']; ?><span>/-</span></div>
          <input type="number" name="qty" class="qty" min="1" max="99" onkeypress="if(this.value.length == 2) return false;" value="1">
       </div>
       <input type="submit" value="add to cart" class="btn" name="add_to_cart">
@@ -188,6 +176,192 @@ include 'components/wishlist_cart.php';
 
    </div>
 
+</section>
+
+<style>
+
+   .h1 {
+   text-align: center;
+   }
+ .latest-product {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* Product Container */
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 products per row */
+    gap: 20px;
+}
+
+/* Product Card */
+.product-details {
+    
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Product Image */
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+/* Product Price */
+.product-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #444;
+    margin: 10px 0;
+}
+
+/* Add to Cart Button */
+.add-to-cart-btn {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-container {
+        grid-template-columns: 1fr; /* 1 item per row on small screens */
+    }
+}
+</style>
+<h1> OUR PRODUCT </h1>
+<section class="latest-product">
+    <div class="product-container">
+    <?php
+        // Array to store product details
+        $products = [
+            ['id' => 1, 'name' => 'Product 1', 'price' => 10.00, 'image' => 'images/bankk.png'],
+            ['id' => 2, 'name' => 'Product 2', 'price' => 20.00, 'image' => 'images/bankk.png'],
+            ['id' => 3, 'name' => 'Product 3', 'price' => 30.00, 'image' => 'images/bankk.png'],
+            ['id' => 4, 'name' => 'Product 4', 'price' => 40.00, 'image' => 'images/bankk.png'],
+            ['id' => 5, 'name' => 'Product 5', 'price' => 50.00, 'image' => 'images/bankk.png'],
+            ['id' => 6, 'name' => 'Product 6', 'price' => 60.00, 'image' => 'images/bankk.png'],
+            ['id' => 7, 'name' => 'Product 7', 'price' => 70.00, 'image' => 'images/bankk.png'],
+            ['id' => 8, 'name' => 'Product 8', 'price' => 80.00, 'image' => 'images/bankk.png'],
+            ['id' => 9, 'name' => 'Product 9', 'price' => 90.00, 'image' => 'images/bankk.png'],
+        ];
+
+        foreach ($products as $product) {
+            ?>
+            <form action="" method="post" class="product-details">
+                <input type="hidden" name="pid" value="<?= $product['id']; ?>">
+                <input type="hidden" name="name" value="<?= $product['name']; ?>">
+                <input type="hidden" name="price" value="<?= $product['price']; ?>">
+                <input type="hidden" name="image" value="<?= $product['image']; ?>">
+                
+                <img src="<?= $product['image']; ?>" alt="<?= $product['name']; ?>" class="product-image">
+                <h3><?= $product['name']; ?></h3>
+                <p class="product-description">This is an amazing product that offers fantastic features and benefits. Perfect for anyone looking to enhance their experience!</p>
+                <p class="product-price">$<?= number_format($product['price'], 2); ?></p>
+                <input type="number" name="qty" class="qty" min="1" max="99" value="1">
+                <button type="submit" name="add_to_cart" class="add-to-cart-btn">Add to Cart</button>
+            </form>
+            <?php
+        }
+        ?>
+        <div class="product-details">
+            <img src="images/bankk.png" alt="Product 1" class="product-image">
+            <h3>Product 1</h3>
+            <p class="product-description">This is an amazing product that offers fantastic features and benefits. Perfect for anyone looking to enhance their experience!</p>
+            <p class="product-price">$10.00</p>
+            <button class="add-to-cart-btn">Add to Cart</button>
+            
+        </div>
+        <div class="product-details">
+            <img src="images/fafan.png" alt="Product 2" class="product-image">
+            <h3>Product 2</h3>
+            <p class="product-description">Experience high quality and durability with Product 2. It's designed to meet your needs and exceed your expectations!</p>
+            <p class="product-price">$20.00</p>
+            <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+        <div class="product-details">
+            <img src="images/bankk.png" alt="Product 3" class="product-image">
+            <h3>Product 3</h3>
+            <p class="product-description">Product 3 is a revolutionary item that combines innovation and style. Don't miss out on this must-have product!</p>
+            <p class="product-price">$30.00</p>
+            <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="product-container">
+        <div class="product-details">
+            <img src="images/bankk.png" alt="Product 4" class="product-image">
+            <h3>Product 4</h3>
+            <p class="product-description">Discover the versatility of Product 4, designed for everyday use. It's the perfect addition to your collection!</p>
+            <p class="product-price">$40.00</p>
+            <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+        <div class="product-details">
+            <img src="images/bankk.png" alt="Product 5" class="product-image">
+            <h3>Product 5</h3>
+            <p class="product-description">With Product 5, enjoy premium quality at an affordable price. It's perfect for gifting or personal use!</p>
+            <p class="product-price">$50.00</p>
+            <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+        <div class="product-details">
+            <img src="images/bankk.png" alt="Product 6" class="product-image">
+            <h3>Product 6</h3>
+            <p class="product-description">Product 6 stands out with its unique features and elegant design. A must-have for anyone who appreciates quality!</p>
+            <p class="product-price">$60.00</p>
+            <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="product-container">
+        <div class="product-details">
+            <img src="images/bankk.png" alt="Product 7" class="product-image">
+            <h3>Product 7</h3>
+            <p class="product-description">Elevate your style with Product 7, a perfect blend of function and aesthetics. Ideal for any occasion!</p>
+            <p class="product-price">$70.00</p>
+            <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+        <div class="product-details">
+            <img src="images/bankk.png" alt="Product 8" class="product-image">
+            <h3>Product 8</h3>
+            <p class="product-description">Product 8 offers unmatched performance and reliability. Experience the difference in quality today!</p>
+            <p class="product-price">$80.00</p>
+            <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+        <div class="product-details">
+            <img src="images/bankk.png" alt="Product 9" class="product-image">
+            <h3>Product 9</h3>
+            <p class="product-description">Last but not least, Product 9 combines tradition and modernity, making it a great choice for everyone!</p>
+            <p class="product-price">$90.00</p>
+            <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+    </div>
 </section>
 
 
@@ -257,6 +431,21 @@ var swiper = new Swiper(".products-slider", {
       },
    },
 });
+
+const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+
+   addToCartButtons.forEach(button => {
+      button.addEventListener('click', function() {
+         const productDetails = button.closest('.product-details');
+         const productName = productDetails.querySelector('h3').textContent;
+         const productPrice = productDetails.querySelector('.product-price').textContent;
+
+         alert(`Product: ${productName}\nPrice: ${productPrice}\nAdded to cart successfully!`);
+
+         // You can add your AJAX code here to make a server request
+         // and add the product to the user's cart in the database.
+      });
+   });
 
 </script>
 
