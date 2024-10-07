@@ -1,0 +1,8 @@
+;/*FB_PKG_DELIM*/
+
+__d("GroupClickActionFalcoEvent",["FalcoLoggerInternal","getFalcoLogPolicy_DO_NOT_USE"],(function(a,b,c,d,e,f,g){"use strict";a=c("getFalcoLogPolicy_DO_NOT_USE")("780");b=d("FalcoLoggerInternal").create("group_click_action",a);e=b;g["default"]=e}),98);
+__d("GroupLeadersEngagementFalcoEvent",["FalcoLoggerInternal","getFalcoLogPolicy_DO_NOT_USE"],(function(a,b,c,d,e,f,g){"use strict";a=c("getFalcoLogPolicy_DO_NOT_USE")("1743660");b=d("FalcoLoggerInternal").create("group_leaders_engagement",a);e=b;g["default"]=e}),98);
+__d("GroupReelsPlinkClickedFalcoEvent",["FalcoLoggerInternal","getFalcoLogPolicy_DO_NOT_USE"],(function(a,b,c,d,e,f,g){"use strict";a=c("getFalcoLogPolicy_DO_NOT_USE")("2745");b=d("FalcoLoggerInternal").create("group_reels_plink_clicked",a);e=b;g["default"]=e}),98);
+__d("GroupsCometRecAffordanceSectionQuery_facebookRelayOperation",[],(function(a,b,c,d,e,f){e.exports="8096393963814549"}),null);
+__d("GroupsCometRecAffordanceTitle.react",["fbt","FDSText.react","react"],(function(a,b,c,d,e,f,g,h){"use strict";var i,j=(i||(i=d("react"))).c,k=i;function a(){var a=j(1),b;a[0]===Symbol["for"]("react.memo_cache_sentinel")?(b=k.jsx(c("FDSText.react"),{type:"headlineEmphasized3",children:h._("__JHASH__X1K4gnSnp26__JHASH__")}),a[0]=b):b=a[0];return b}g["default"]=a}),226);
+__d("GroupsKeyCommandShortcutsFalcoEvent",["FalcoLoggerInternal","getFalcoLogPolicy_DO_NOT_USE"],(function(a,b,c,d,e,f,g){"use strict";a=c("getFalcoLogPolicy_DO_NOT_USE")("2955");b=d("FalcoLoggerInternal").create("groups_key_command_shortcuts",a);e=b;g["default"]=e}),98);

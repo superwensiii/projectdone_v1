@@ -1,0 +1,4 @@
+;/*FB_PKG_DELIM*/
+
+__d("MAWFTSRestoreSyncDeferred",["JSResourceForInteraction","asyncToGeneratorRuntime"],(function(a,b,c,d,e,f,g){"use strict";var h=c("JSResourceForInteraction")("MAWFTSRestoreSync").__setRef("MAWFTSRestoreSyncDeferred");function a(){return i.apply(this,arguments)}function i(){i=b("asyncToGeneratorRuntime").asyncToGenerator(function*(){var a=(yield h.load());a=a.getFTSRestoreSync;return a()});return i.apply(this,arguments)}g.getInstance=a}),98);
+__d("MAWMiActOnActThreadReadyDeferred",["requireDeferred"],(function(a,b,c,d,e,f,g){"use strict";var h=c("requireDeferred")("MAWMiActOnActThreadReady").__setRef("MAWMiActOnActThreadReadyDeferred");function a(a,b,c,d){return h.load().then(function(e){e=e.onActThreadReady;return e(a.tables,b,c,d)})}g["default"]=a}),98);
