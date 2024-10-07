@@ -2,6 +2,12 @@
 
 include 'components/connect.php';
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 42dd940b7296772b1c9d186fe797d5fcb59e13e8
 session_start();
 
 if(isset($_SESSION['user_id'])){
@@ -12,6 +18,7 @@ if(isset($_SESSION['user_id'])){
 
 if(isset($_POST['submit'])){
 
+<<<<<<< HEAD
    $name = $_POST['name'];
    $name = filter_var($name, FILTER_SANITIZE_STRING);
    $email = $_POST['email'];
@@ -42,6 +49,39 @@ if(isset($_POST['submit'])){
 ?>
 
 
+=======
+}
+
+  
+  
+
+$name = $_POST['name'];
+$name = filter_var($name, FILTER_SANITIZE_STRING);
+$email = $_POST['email'];
+$email = filter_var($email, FILTER_SANITIZE_STRING);
+$pass = sha1($_POST['pass']);
+$pass = filter_var($pass, FILTER_SANITIZE_STRING);
+$cpass = sha1($_POST['cpass']);
+$cpass = filter_var($cpass, FILTER_SANITIZE_STRING);
+
+$select_user = $conn->prepare("SELECT * FROM users WHERE email = ?");
+$select_user->execute([$email,]);
+$row = $select_user->fetch(PDO::FETCH_ASSOC);
+
+if($select_user->rowCount() > 0){
+   $message[] = 'email already exists!';
+}else{
+   if($pass != $cpass){
+      $message[] = 'Confirm Password not Matched!';
+   }else{
+      $insert_user = $conn->prepare("INSERT INTO `users`(name, email, password) VALUES(?,?,?)");
+      $insert_user->execute([$name, $email, $cpass]);
+      $message[] = 'Registered Successfully, Login now please!';
+        }
+    }
+
+?>
+>>>>>>> 42dd940b7296772b1c9d186fe797d5fcb59e13e8
  
 <!-- HTML code for displaying the message -->
 <?php if (!empty($message)): ?>
@@ -147,7 +187,11 @@ if(isset($_POST['order'])){
    $total_products = $_POST['total_products'];
    $total_price = $_POST['total_price'];
 
+<<<<<<< HEAD
    $check_cart = $conn->prepare("SELECT * FROM cart WHERE user_id = ?");
+=======
+   $check_cart = $conn->prepare("SELECT * FROM `cart` WHERE user_id = ?");
+>>>>>>> 42dd940b7296772b1c9d186fe797d5fcb59e13e8
    $check_cart->execute([$user_id]);
 
    if($check_cart->rowCount() > 0){
@@ -155,7 +199,11 @@ if(isset($_POST['order'])){
       $insert_order = $conn->prepare("INSERT INTO `orders`(user_id, name, number, email, method, address, total_products, total_price) VALUES(?,?,?,?,?,?,?,?)");
       $insert_order->execute([$user_id, $name, $number, $email, $method, $address, $total_products, $total_price]);
 
+<<<<<<< HEAD
       $delete_cart = $conn->prepare("DELETE FROM cart WHERE user_id = ?");
+=======
+      $delete_cart = $conn->prepare("DELETE FROM `cart` WHERE user_id = ?");
+>>>>>>> 42dd940b7296772b1c9d186fe797d5fcb59e13e8
       $delete_cart->execute([$user_id]);
 
       $message[] = 'order placed successfully!';
@@ -341,9 +389,19 @@ section.checkout-orders .inputBox p {
             <div class="inputBox">
                <span>Your Number:</span>
                <input type="number" name="number" placeholder="Enter your number" class="box" min="0" max="99999999999" onkeypress="if(this.value.length == 10) return false;" required>
+<<<<<<< HEAD
                
             </div>
             
+=======
+               <input type="submit" value="Send OTP" class="btn" name="submit">
+            </div>
+            <div class="inputBox">
+               <span>Verify OTP:</span>
+               <input type="text" name="otp" placeholder="Enter Code" class="box" required>
+               <input type="submit" name="ver" value="Verify OTP" class="btn">
+            </div>
+>>>>>>> 42dd940b7296772b1c9d186fe797d5fcb59e13e8
             <div class="inputBox">
                <span>Your Email:</span>
                <input type="email" name="email" placeholder="Enter your email" class="box" maxlength="50" required>
@@ -400,4 +458,8 @@ section.checkout-orders .inputBox p {
 <script src="js/script.js"></script>
 
 </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> 42dd940b7296772b1c9d186fe797d5fcb59e13e8

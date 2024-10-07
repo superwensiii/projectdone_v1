@@ -47,7 +47,11 @@ html{
 body{
    background: rgb(101,93,57);
 background: linear-gradient(90deg, rgba(101,93,57,0.9640231092436975) 5%, rgba(111,107,71,1) 35%, rgba(255,244,0,1) 89%, rgba(255,231,0,1) 100%);
+<<<<<<< HEAD
 }section{
+=======
+section{
+>>>>>>> 42dd940b7296772b1c9d186fe797d5fcb59e13e8
    padding:2rem;
    max-width: 1200px;
    margin:0 auto;
@@ -101,7 +105,38 @@ background: linear-gradient(90deg, rgba(101,93,57,0.9640231092436975) 5%, rgba(1
    
 }
 
+<<<<<<< HEAD
 
+=======
+.message{
+   position: sticky;
+   top:0;
+   max-width: 1200px;
+   margin:0 auto;
+   background-color: var(--light-bg);
+   padding:2rem;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap:1.5rem;
+   z-index: 1100;
+}
+
+.message span{
+   font-size: 2rem;
+   color:var(--black);
+}
+
+.message i{
+   cursor: pointer;
+   color:var(--red);
+   font-size: 2.5rem;
+}
+
+.message i:hover{
+   color:var(--black);
+}
+>>>>>>> 42dd940b7296772b1c9d186fe797d5fcb59e13e8
 
 .empty{
    padding:1.5rem;
@@ -129,6 +164,7 @@ background: linear-gradient(90deg, rgba(101,93,57,0.9640231092436975) 5%, rgba(1
 
 .header{
    
+<<<<<<< HEAD
    
    position: sticky;
    top:0; left:0; right:0;
@@ -137,6 +173,14 @@ background: linear-gradient(90deg, rgba(101,93,57,0.9640231092436975) 5%, rgba(1
    z-index: 1000;
   
 
+=======
+   position: static;
+   top:0; left:0; right:0;
+   background: rgb(190,190,190);
+background: linear-gradient(90deg, rgba(190,190,190,1) 2%, rgba(252,252,252,0.9192051820728291) 32%, rgba(251,251,251,1) 81%);
+   box-shadow: var(--box-shadow);
+   z-index: 1000;
+>>>>>>> 42dd940b7296772b1c9d186fe797d5fcb59e13e8
 }
 
 .header .flex{
@@ -211,7 +255,11 @@ background: linear-gradient(90deg, rgba(101,93,57,0.9640231092436975) 5%, rgba(1
 }
 
 #menu-btn{
+<<<<<<< HEAD
    display: inline-block;
+=======
+   display: none;
+>>>>>>> 42dd940b7296772b1c9d186fe797d5fcb59e13e8
 }
 
 .home-bg{

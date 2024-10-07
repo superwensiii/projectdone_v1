@@ -339,7 +339,11 @@ h1 {
       <?php } ?>
 
 
+<<<<<<< HEAD
        
+=======
+        ?>
+>>>>>>> 42dd940b7296772b1c9d186fe797d5fcb59e13e8
 
         <input type="submit" name="order" class="btn <?= ($grand_total > 1)?'':'disabled'; ?>" value="Place Order">
     </form>

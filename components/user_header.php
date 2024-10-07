@@ -1,5 +1,22 @@
 
 
+<<<<<<< HEAD
+=======
+<?php
+
+
+   if(isset($message)){
+      foreach($message as $message){
+         echo '
+         <div class="message">
+            <span>'.$message.'</span>
+            <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
+         </div>
+         ';
+      }
+   }
+?>
+>>>>>>> 42dd940b7296772b1c9d186fe797d5fcb59e13e8
 
 
 <header class="header">
